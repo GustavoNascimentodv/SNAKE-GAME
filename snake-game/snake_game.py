@@ -1,28 +1,22 @@
-# =========================
-# Snake Game Premium - Pygame
+# Snake Game - Pygame
 # Arquivo: snake_game.py
 # =========================
 #
 # Requisitos:
 #   pip install pygame
-#
-# Para rodar:
-#   python snake_game.py
-#
-# =========================
 
 import pygame
 import random
 import math
 import sys
 
-# -------------------------
+
 # Inicialização
 # -------------------------
 pygame.init()
 pygame.mixer.init()
 
-# -------------------------
+
 # Configurações
 # -------------------------
 WIDTH = 1024
@@ -35,7 +29,7 @@ GRID_HEIGHT = HEIGHT // GRID_SIZE
 
 TITLE = "Snake Neon Edition"
 
-# -------------------------
+
 # Cores
 # -------------------------
 BG_TOP = (10, 12, 30)
@@ -52,7 +46,7 @@ GRAY = (120, 120, 120)
 
 GLOW = (120, 255, 120)
 
-# -------------------------
+
 # Tela
 # -------------------------
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -60,14 +54,14 @@ pygame.display.set_caption(TITLE)
 
 clock = pygame.time.Clock()
 
-# -------------------------
+
 # Fontes
 # -------------------------
 title_font = pygame.font.SysFont("arialblack", 64)
 menu_font = pygame.font.SysFont("arial", 30)
 score_font = pygame.font.SysFont("consolas", 32)
 
-# -------------------------
+
 # Helpers
 # -------------------------
 def draw_gradient(surface, top_color, bottom_color):
@@ -96,7 +90,7 @@ def glow_circle(surface, color, pos, radius):
         )
         surface.blit(alpha_surface, (pos[0] - radius * 4, pos[1] - radius * 4))
 
-# -------------------------
+
 # Snake
 # -------------------------
 class Snake:
@@ -183,7 +177,7 @@ class Snake:
             else:
                 pygame.draw.rect(screen, GREEN_2, rect, border_radius=8)
 
-# -------------------------
+
 # Food
 # -------------------------
 class Food:
@@ -207,7 +201,7 @@ class Food:
         pygame.draw.circle(screen, APPLE_RED, center, 10)
         pygame.draw.circle(screen, (255, 120, 140), center, 4)
 
-# -------------------------
+
 # Partículas
 # -------------------------
 particles = []
@@ -243,7 +237,7 @@ def update_particles():
         if particle["life"] <= 0:
             particles.remove(particle)
 
-# -------------------------
+
 # Menu
 # -------------------------
 def draw_menu():
