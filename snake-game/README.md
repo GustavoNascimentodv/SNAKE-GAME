@@ -21,7 +21,7 @@ Abra o **CMD** e execute:
 python --version
 ```
 
-Se aparecer a versão do Python, está tudo certo ✅
+Se aparecer a versão do Python, está funcionando.
 
 ---
 
