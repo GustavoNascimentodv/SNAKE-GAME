@@ -1,2 +1,2 @@
 pygame
-pip install --upgrade pip
+
