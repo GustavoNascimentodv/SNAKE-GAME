@@ -5,7 +5,7 @@
 # Requisitos:
 #   pip install pygame
 
-import pygame
+import pygame-ce
 import random
 import math
 import sys
